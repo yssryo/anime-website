@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0F0F0F;
+    --surface: #1A1A1A;
+    --primary: #8B5CF6;
+    --accent: #EC4899;
+    --text: #FFFFFF;
+    --secondary: #A1A1AA;
+}
+
+header {
+    margin: 10px 20px 0 20px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    height : 60px;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+}
+
+.logo {
+ font-family: "linotype", serif;
+ color: var(--primary);
+ font-size: 1.5rem;
+}
+
+.logo span {
+    color : var(--accent);
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 20px;
+}
+
+.header-item a {
+    font-family: "zzz";
+    color: var(--text);
+    text-decoration: none;
+}
+
+input {
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 6px 5px 8px;
+    text-align: left;
+    background-color: var(--text);
+    border: none;
+}
+
+::placeholder {
+    color: var(--accent);
+    font-family: "zzz";
+}
+
+.user-icon img {
+    padding: 5px 0 1px 0;
+    width: 30px;
+    height: auto;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.hero img{ 
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    height: auto;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+@font-face { 
+    font-family: "linotype";
+    src: url("/src/font/Linotype\ Didot\ Roman.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "zzz";
+    src: url("/src/font/en-us.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

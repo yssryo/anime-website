@@ -31,7 +31,7 @@ header {
 }
 
 .logo {
- font-family: "linotype", serif;
+    font-family: "linotype", serif;
  color: var(--primary);
  font-size: 1.5rem;
 }
@@ -45,6 +45,8 @@ header {
     align-items: center;
     font-size: 1.1rem;
     gap: 20px;
+    text-decoration: underline var(--accent) 3px;
+    text-underline-offset: 6px;
 }
 
 .header-item a {
@@ -52,6 +54,11 @@ header {
     color: var(--text);
     text-decoration: none;
 }
+
+.active, .header-item a:hover {
+    color: var(--primary);
+}
+
 
 input {
     font-size: 1rem;
@@ -109,6 +116,7 @@ input {
 }
 
 .hero-image {
+    padding-top: 30px;
     position: relative;
     margin: auto;
     max-width: 1000px;
@@ -130,19 +138,19 @@ input {
     margin: 0 auto;
 }
 
-.hero-text {
+.hero-text h1{
     position: absolute;
     left: 30px;
     right: 20px;
     bottom: 80px;
     color: var(--text);
-    font-size: clamp(1.3rem, 1vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     width: fit-content;
     font-family: "zzz";
     text-align: left;
     margin: 0;
     padding: 0.5rem 0.75rem;
-    background: color-mix(in srgb, var(--accent), transparent 40%);
+    background: color-mix(in srgb, var(--accent), transparent 75%);
     border-radius: 10px;
     box-sizing: border-box;
     animation-name: fade;
@@ -165,6 +173,11 @@ input {
     box-sizing: border-box;
     animation-name: fade;
 }
+
+.hero-btn:hover {
+    box-shadow: inset 0px -10px 12px -4px var(--accent);
+}
+
 
 .fade {
     animation-name: fade;

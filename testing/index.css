@@ -1,5 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 1;
+    padding: 1;
     box-sizing: border-box;
+}
+
+
+
+.textS {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
 }

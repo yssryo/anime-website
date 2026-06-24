@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antrack</title>
     <link rel="stylesheet" href="css/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <header>
@@ -17,23 +19,22 @@
         </div>
     </header>
 
-    <main class="hero-image">
-        <div class="img-hero fade">
+    <section class="carousal">
+        <div class="carousal-img fade">
             <img src="src/img/rezero.png" alt="Hero Image">
-            <div class="hero-text"><h1>Re:zero</h1></div>
-            <button class="hero-btn" onclick="window.location.href='#'">Watch Now</button>
+            <div class="carousal-text"><h1>Re:zero</h1></div>
+            <button class="carousal-btn" onclick="window.location.href='#'">Watch Now</button>
         </div>
-        <div class="img-hero fade">
+        <div class="carousal-img fade">
             <img src="src/img/cyberpunk.png" alt="Hero Image">
-            <div class="hero-text"><h1>Cyberpunk:Edgerunner</h1></div>
-            <button class="hero-btn" onclick="window.location.href='#'">Watch Now</button>
+            <div class="carousal-text"><h1>Cyberpunk:Edgerunner</h1></div>
+            <button class="carousal-btn" onclick="window.location.href='#'">Watch Now</button>
         </div>
-        <div class ="img-hero fade">
+        <div class ="carousal-img fade">
             <img src="src/img/mushokutensei.png" alt="Hero Image">
-            <div class="hero-text"><h1>Mushoku Tensei</h1></div>
-            <button class="hero-btn" onclick="window.location.href='#'">Watch Now</button>
+            <div class="carousal-text"><h1>Mushoku Tensei</h1></div>
+            <button class="carousal-btn" onclick="window.location.href='#'">Watch Now</button>
         </div>
-
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </main>
@@ -42,23 +43,19 @@
         <span class="line" onclick="currentSlide(1)"></span>
         <span class="line" onclick="currentSlide(2)"></span>
         <span class="line" onclick="currentSlide(3)"></span>
+        <span class="line" onclick="currentSlide(3)"></span>
+        <span class="line" onclick="currentSlide(3)"></span>
     </div>
+    </section>
 
-
+    
     <section class="popular-anime">
-
+    <h1 class="h1A">Popular Anime</h1>
+    <div id="card-topA"></div>
     </section>
-
-
-
-    <section class="container-card">
-
-
-
-    </section>
-
 
 
     <script src="js/slideshow.js"></script>
+    <script src="js/JikanAPI.js"></script>
 </body>
 </html>

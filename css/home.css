@@ -115,14 +115,14 @@ input {
     background-color: var(--accent);
 }
 
-.hero-image {
+.carousal {
     padding-top: 30px;
     position: relative;
     margin: auto;
     max-width: 1000px;
 }
 
-.img-hero {
+.carousal-img {
     position: relative;
     display: flex;
     justify-content: center;
@@ -130,7 +130,7 @@ input {
     margin: 20px;
 }
 
-.hero-image img {
+.carousal-img img {
     display: block;
     width: 95%;
     max-width: 100%;
@@ -138,7 +138,7 @@ input {
     margin: 0 auto;
 }
 
-.hero-text h1{
+.carousal-text h1{
     position: absolute;
     left: 30px;
     right: 20px;
@@ -156,7 +156,7 @@ input {
     animation-name: fade;
 }
 
-.hero-btn {
+.carousal-btn {
     position: absolute;
     right: 50px;
     bottom: 20px;
@@ -174,14 +174,48 @@ input {
     animation-name: fade;
 }
 
-.hero-btn:hover {
+.carousal-btn:hover {
     box-shadow: inset 0px -10px 12px -4px var(--accent);
 }
-
 
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+}
+
+.popular-anime {
+    background-color: var(--accent);
+    margin: 50px 20px 30px 20px;
+    padding: 20px;
+    color: var(--text);
+    width: fit-content;
+    /* display: flex;
+    justify-items: center; */
+}
+
+.anime-card {
+    align-items: center;
+    padding: 10px;
+}
+
+.card-image{
+    height: clamp(300px, 20vw, 800px);
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#card-topA {
+    display: flex;
+    flex-direction: row;
+}
+.text-card {
+    display: none;
+    padding: 10px 0px 0px 20px;
+}
+
+.h1A {
+    padding: 0px 0px 10px 20px;
 }
 
 @keyframes fade {

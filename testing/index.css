@@ -9,3 +9,10 @@
 .textS {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
 }
+
+.container {
+    display: flex;
+    gap: 10px;
+    flex: 10;
+    flex-direction: row;
+}

@@ -33,7 +33,7 @@ function showToPage(animeList) {
     animeList.forEach(anime => {
         contentHtml += 
         `<div class="anime-card">
-            <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}" class="card-image"></img>
+            <a href="${anime.url}"><img src="${anime.images.jpg.large_image_url}" alt="${anime.title}" class="card-image"><a href="${anime.url}"></a></img></a>
             <h3 class="text-card">${anime.title}</h3>
             <p class="text-card">${anime.score || `N/A`}</p>
         </div>

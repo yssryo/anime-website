@@ -19,7 +19,7 @@ function loadAnimeTop() {
     fetch(urlTop)
     .then(response => response.json())
     .then(responseObj => {
-        const topTen = responseObj.data ? responseObj.data.slice(0, 10) : [];
+        const topTen = responseObj.data ? responseObj.data.slice(0, 16) : [];
         showToPage(topTen);
     })
     .catch(error => console.error("something went wrong:", error))
@@ -32,13 +32,18 @@ function showToPage(animeList) {
     
     animeList.forEach(anime => {
         contentHtml += 
-        `<div class="anime-card">
-            <a href="${anime.url}"><img src="${anime.images.jpg.large_image_url}" alt="${anime.title}" class="card-image"></img></a>
-            <h3 class="text-card">${anime.title}</h3>
-            <p class="text-card">${anime.score || `N/A`}</p>
+        `
+        <div class="anime-card">
+            <a href="${anime.url}" class="image-link">
+            <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}" class="card-image"></img>
+            </a>
+            <div class="text-wrapper">
+            <h2 class="anime-title">${anime.title}</h2>
+            <p class="anime-score">${anime.score || `N/A`}</p>
+            </div>
         </div>
         `;
-    });
+    })
     container.innerHTML = contentHtml;
 }
 

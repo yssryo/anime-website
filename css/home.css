@@ -26,7 +26,8 @@ header {
     justify-content: space-between;
     background: var(--surface);
     height : 60px;
-    width: calc(100% - 40px);
+    width: 98%;
+    min-width: 200px;
     border-radius: 10px;
 }
 

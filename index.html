@@ -9,14 +9,19 @@
 </head>
 <body>
     <header>
-        <div class="logo">Ani<span>Tracker</span></div>
-        <div class="header-item">
-            <a href="#">Home</a>
-            <a href="#">Genre</a>
-            <a href="testing/test.html">Saved</a>
-            <input type="text" placeholder="Search">
-            <a href="#" class="user-icon"><img src="src/icon/userlight.png"></a>
-        </div>
+        <nav class="navbar" id="navbarSide">
+            <div class="logo">Ani<span>Tracker</span></div>
+            <ul class="nav-item">
+                <a href="#">Home</a>
+                <a href="#">Genre</a>
+                <a href="testing/test.html">Saved</a>
+                <input type="text" placeholder="Search" id="searchAnime">
+                <a href="#"><img src="src/icon/userlight.png" class="nav-icon"></a>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerN()">
+                ☰
+            </a>
+        </nav>
     </header>
 
     <section class="carousal">
@@ -39,12 +44,12 @@
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </main>
 
-    <div style="text-align: center;">
-        <span class="line" onclick="currentSlide(1)"></span>
-        <span class="line" onclick="currentSlide(2)"></span>
-        <span class="line" onclick="currentSlide(3)"></span>
-        <span class="line" onclick="currentSlide(3)"></span>
-        <span class="line" onclick="currentSlide(3)"></span>
+    <div class="dot">
+        <span class="circle" onclick="currentSlide(1)"></span>
+        <span class="circle" onclick="currentSlide(2)"></span>
+        <span class="circle" onclick="currentSlide(3)"></span>
+        <span class="circle" onclick="currentSlide(3)"></span>
+        <span class="circle" onclick="currentSlide(3)"></span>
     </div>
     </section>
 
@@ -58,7 +63,9 @@
     </section>
 
 
-    <script src="js/slideshow.js"></script>
+    
+
+    <script src="js/function.js"></script>
     <script src="js/JikanAPI.js"></script>
 </body>
 </html>

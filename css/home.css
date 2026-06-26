@@ -18,51 +18,51 @@ body {
     color: var(--text);
 }
 
-header {
-    margin: 10px 20px 0 20px;
-    padding: 0 2rem;
+.navbar {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-self: center;
     justify-content: space-between;
-    background: var(--surface);
+    margin: 20px;
+    padding: 10px 1rem;
     height : 60px;
-    width: 98%;
-    min-width: 200px;
+    width: 96%;
+    min-width: 300px;
     border-radius: 10px;
+    background: var(--surface);
 }
 
 .logo {
-    font-family: "linotype", serif;
+ font-family: "linotype", serif;
  color: var(--primary);
- font-size: 1.5rem;
+ font-size: clamp(18px, 30px, 40px);
+ margin: 0;
 }
 
 .logo span {
     color : var(--accent);
 }
 
-.header-item {
+.nav-item {
     display: flex;
-    align-items: center;
-    font-size: 1.1rem;
+    align-items: flex-end;
+    font-size: clamp(12px, 2vw, 27px);
     gap: 20px;
-    text-decoration: underline var(--accent) 3px;
     text-underline-offset: 6px;
 }
 
-.header-item a {
+.nav-item a {
     font-family: "zzz";
+    font-size: 20px;
     color: var(--text);
-    text-decoration: none;
 }
 
-.active, .header-item a:hover {
+.active, .nav-item a:hover {
     color: var(--primary);
 }
 
-
-input {
-    font-size: 1rem;
+#searchAnime {
+    font-size: 12px;
     border-radius: 5px;
     padding: 5px 6px 5px 8px;
     text-align: left;
@@ -73,12 +73,17 @@ input {
 ::placeholder {
     color: var(--accent);
     font-family: "zzz";
+    font-size: large;
 }
 
-.user-icon img {
+.nav-icon{
     padding: 5px 0 1px 0;
     width: 30px;
     height: auto;
+}
+
+.icon {
+    display: none;
 }
 
 .prev, .next {
@@ -101,19 +106,31 @@ input {
     border-radius: 3px 0 0 3px;
 }
 
-
-.line {
-    cursor: pointer;
-    height: 2px;
-    width: clamp(1px, 5%, 30px);
-    padding-right : 100px;
-    margin: 0 2px;
-    background-color: var(--text);
-    display: inline-block;
+.dot {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 7px;
+    padding: 10px;
+    margin-left: clamp(20px, 3.6%, 50px);
+    transition: background-color 0.6s ease;
 }
 
-.active, .line:hover {
+.circle {
+    cursor: pointer;
+    width: 20px;
+    height:20px;
+    background-color: var(--text);
+    border-radius: 50%;
+}
+
+
+.active, .circle:active {
     background-color: var(--accent);
+    border-radius: 40%;
+    height: 4px;
+    width: 40px;
+    border-radius: 17%;
 }
 
 .carousal {
@@ -187,15 +204,17 @@ input {
 
 .popular-anime {
     background-color: var(--accent);
-    right: clamp(20px, 10vw, 20px);
-    left: clamp(10px, 10vw, 10px);
-    position: relative;
-    margin: 50px 30px 30px 30px;
+    right: clamp(1px, 1vw, 10px);
+    left: clamp(1px, 1vw, 10px);
+    position: absolute;
+    margin: 60px 20px 60px 20px;
     padding: 10px;
     width: auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
     grid-template-rows: auto auto;
-
 }
 
 .anime-card {
@@ -231,17 +250,17 @@ input {
 
 
 .anime-card {
-        font-family: "zzz";
-        font-size: 13px;
-        margin: 0;
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding: 0;
-        gap: 2px;
-        text-align: center;
-        margin: 0;
+    font-family: "zzz";
+    font-size: 13px;
+    margin: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    gap: 2px;
+    text-align: center;
+    margin: 0;
 }
 
 .image-link {
@@ -266,13 +285,37 @@ input {
     text-underline-offset: 8px;
 }
 
+
+
+
+
+
 @media screen and (max-width: 1200px){
+    .nav-item {
+        display: none;
+        gap: 10px;
+
+    }
+
+    .nav-icon {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    } 
+    
+
+    .navbar {
+        width: 90%;
+    }
+
     .line {
         height: 2px;
     }
 
     .popular-anime {
-        margin: 50px 10px 30px 10px;
+        margin: 50px 20px 30px 20px;
     }
 
     #card-topA {

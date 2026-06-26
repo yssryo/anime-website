@@ -347,14 +347,14 @@ input {
 
 @font-face { 
     font-family: "linotype";
-    src: url("/src/font/Linotype\ Didot\ Roman.otf") format("truetype");
+    src: url("../src/font/Linotype\ Didot\ Roman.otf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "zzz";
-    src: url("/src/font/en-us.ttf") format("truetype");
+    src: url("../src/font/en-us.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }

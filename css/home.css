@@ -35,8 +35,8 @@ body {
 .logo {
  font-family: "linotype", serif;
  color: var(--primary);
- font-size: clamp(18px, 30px, 40px);
- padding: 0px 0px 0px 30px;
+ font-size: 30px;
+ padding: 0px 0px 0px 20px;
 }
 
 .logo span {
@@ -49,7 +49,6 @@ body {
     font-size: clamp(12px, 2vw, 27px);
     gap: 20px;
     text-underline-offset: 6px;
-    padding: 0px 0px 4px 0px;
 }
 
 .nav-item a {
@@ -65,7 +64,7 @@ body {
 #searchAnime {
     font-size: 15px;
     border-radius: 5px;
-    padding: 5px 0px 5px 8px;
+    padding: 5px 6px 5px 8px;
     text-align: left;
     background-color: var(--text);
     border: none;
@@ -74,14 +73,13 @@ body {
 ::placeholder {
     color: var(--accent);
     font-family: "zzz";
-    font-size: large;
+    font-size: 20px;
 }
 
 .nav-icon{
-    padding: 0px;
+    padding: 5px 0 1px 0;
     width: 30px;
     height: 30px;
-    margin: 0px 10px 0px 0px;
 }
 
 .iconH {
@@ -296,22 +294,28 @@ body {
 
 
 @media screen and (max-width: 1200px){
+    .logo {
+        font-size: 19px;
+        padding: 0px 0px 0px 8px;
+        margin: 0px 10px 0px 0px;
+    }
+
     .nav-item {
         display: none;
-        gap: 10px;
+        gap: 1px;
         
     }
     .nav-icon {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         display: block;
         flex-shrink: 0;
     }
     a {
         display: flex; /* or flex */
-        min-width: 30px;
+        min-width: 20px;
     }
-
+    
     .open-icon {
         display: none;
     }
@@ -327,20 +331,36 @@ body {
     }
     
     .nav-item.nyala {
-        
         gap: 10px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        
     }
+    
+    .nav-item a {
+        margin: 0px 0px 0px 5px;
+        padding: 0px;
+        font-size: 15px;
+
+    }
+
     
     .open-icon.nyala {
         display: block;
-        font-size: 30px;
+    }
+   
+    
+
+    #searchAnime {
+        font-size: 9px;
+        padding: 8px 2px 4px 7px;
     }
     
-    
+
+
+    ::placeholder {
+        font-size: 18px;
+    }
 
     .navbar {
         width: 90%;

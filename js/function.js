@@ -89,8 +89,8 @@ function hamburgerN() {
     
     const iconOpen = document.getElementById("openIcon");
     iconOpen.style.transform = "rotate(90deg)";
-
-
+    
+    
 };
 
 
@@ -98,7 +98,7 @@ function hamburgerN() {
 function openNavbar() {
     const iconOpen = document.getElementById("openIcon");
     iconOpen.style.transform = "rotate(0deg)";
-}
+};
 
 
 

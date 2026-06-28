@@ -302,17 +302,16 @@ body {
 
     .nav-item {
         display: none;
-        gap: 1px;
-        
     }
     .nav-icon {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 24px;
         display: block;
         flex-shrink: 0;
+        padding: 0px 0px 1px 0px;
     }
     a {
-        display: flex; /* or flex */
+        display: flex;
         min-width: 20px;
     }
     
@@ -331,14 +330,14 @@ body {
     }
     
     .nav-item.nyala {
-        gap: 10px;
+        gap: 7px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
     }
     
     .nav-item a {
-        margin: 0px 0px 0px 5px;
+        margin: 0px 0px 0px 2px;
         padding: 0px;
         font-size: 15px;
 
@@ -347,19 +346,22 @@ body {
     
     .open-icon.nyala {
         display: block;
+        font-size: 25px;
+        padding: 0px 0px 6px 0px;
     }
    
     
 
     #searchAnime {
-        font-size: 9px;
+        font-size: 5px;
         padding: 8px 2px 4px 7px;
     }
     
 
 
     ::placeholder {
-        font-size: 18px;
+        font-size: 11px;
+        /* width: 30px; */
     }
 
     .navbar {

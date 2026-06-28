@@ -105,6 +105,12 @@ function loadAnime() {
 };
 
 
+
+// fetch(url, options)
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.error("something went wrong", error))
+
 // fetch(`https://api.jikan.moe/v4/anime/47917/statistics`)
 // .then(response => response.json())
 // .then(data => console.log(data))

@@ -20,11 +20,11 @@ body {
 
 .navbar {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-self: center;
     justify-content: space-between;
     margin: 20px;
-    padding: 10px 1rem;
+    padding: 5px;
     height : 60px;
     width: 96%;
     min-width: 300px;
@@ -36,7 +36,7 @@ body {
  font-family: "linotype", serif;
  color: var(--primary);
  font-size: clamp(18px, 30px, 40px);
- margin: 0;
+ padding: 0px 0px 0px 30px;
 }
 
 .logo span {
@@ -49,6 +49,7 @@ body {
     font-size: clamp(12px, 2vw, 27px);
     gap: 20px;
     text-underline-offset: 6px;
+    padding: 0px 0px 4px 0px;
 }
 
 .nav-item a {
@@ -62,9 +63,9 @@ body {
 }
 
 #searchAnime {
-    font-size: 12px;
+    font-size: 15px;
     border-radius: 5px;
-    padding: 5px 6px 5px 8px;
+    padding: 5px 0px 5px 8px;
     text-align: left;
     background-color: var(--text);
     border: none;
@@ -77,12 +78,17 @@ body {
 }
 
 .nav-icon{
-    padding: 5px 0 1px 0;
+    padding: 0px;
     width: 30px;
-    height: auto;
+    height: 30px;
+    margin: 0px 10px 0px 0px;
 }
 
-.icon {
+.iconH {
+    display: none;
+}
+
+.open-icon {
     display: none;
 }
 
@@ -289,21 +295,51 @@ body {
 
 
 
-
 @media screen and (max-width: 1200px){
     .nav-item {
         display: none;
         gap: 10px;
-
+        
+    }
+    .nav-icon {
+        width: 40px;
+        height: 40px;
+        display: block;
+        flex-shrink: 0;
+    }
+    a {
+        display: flex; /* or flex */
+        min-width: 30px;
     }
 
-    .nav-icon {
+    .open-icon {
         display: none;
     }
-
-    .icon {
+    
+    .iconH {
         display: block;
     } 
+    
+    
+    
+    .iconH.hide {
+        display: none;
+    }
+    
+    .nav-item.nyala {
+        
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+    
+    .open-icon.nyala {
+        display: block;
+        font-size: 30px;
+    }
+    
     
 
     .navbar {

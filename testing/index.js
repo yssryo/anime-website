@@ -58,23 +58,43 @@
 
 
 
-function searchAnime() {
-  const kataKunci = document.getElementById("searching").value;
-  if(!kataKunci) {
-    alert("salah");
-    return;
-  }
-  const url = `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(kataKunci)}&limit=5`
-  fetch(url) 
-  .then(response => response.json())
-  .then(responseObj => {
-    const animeResault = responseObj.data;
-    console.clear();
-    console.log(`hasil: "${kataKunci}"`);
+// function searchAnime() {
+//   const kataKunci = document.getElementById("searching").value;
+//   if(!kataKunci) {
+//     alert("salah");
+//     return;
+//   }
+//   const url = `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(kataKunci)}&limit=5`
+//   fetch(url) 
+//   .then(response => response.json())
+//   .then(responseObj => {
+//     const animeResault = responseObj.data;
+//     console.clear();
+//     console.log(`hasil: "${kataKunci}"`);
 
-    animeResault.forEach((anime, index) => {
-      console.log(`${index + 1}.${anime.title}.${anime.type}.${anime.images}.${anime.rating}${anime.synopsis} (score: ${anime.score})`)
-    })
-  })
-  .catch(error => console.error("not found:", error))
+//     animeResault.forEach((anime, index) => {
+//       console.log(`${index + 1}.${anime.title}.${anime.type}.${anime.images}.${anime.rating}${anime.synopsis} (score: ${anime.score})`)
+//     })
+//   })
+//   .catch(error => console.error("not found:", error))
+// }
+
+
+
+const url = 'https://scappperanime.p.rapidapi.com/anime/mashle-2nd-season-episode-11';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '7c81312b5bmsha1be16938045c4ap1c499djsnb751ee7c5ec8',
+		'x-rapidapi-host': 'scappperanime.p.rapidapi.com',
+		'Content-Type': 'application/json'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	console.log(result);
+} catch (error) {
+	console.error(error);
 }

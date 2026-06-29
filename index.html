@@ -12,18 +12,25 @@
         <nav class="navbar" id="navbarSide">
             <div class="logo">Ani<span>Tracker</span></div>
             <ul class="nav-item">
+                <button onclick="openNavbar()" class="open-icon" id="openIcon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
                 <a href="#">Home</a>
-                <a href="#">Genre</a>
-                <!-- <a href="testing/test.html">Saved</a> -->
-                <input type="text" placeholder="Search" id="searchAnime">
-                <a href="#"><img src="src/icon/userlight.png" class="nav-icon"></a>
-                <button onclick="openNavbar()" class="open-icon" id="openIcon">></button>
+                <a href="#">Schedule</a>
+                <a href="#">Tracking</a>
+                <a href="#"></a>
+                <div class="bottomGrup">
+                    <input type="text" placeholder="Search" id="searchAnime">
+                    <a href="#"><img src="src/icon/userlight.png" class="nav-icon"></a>
+                </div>
             </ul>
             <a href="javascript:void(0);" class="iconH" onclick="hamburgerN()">
-                ☰
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             </a>
         </nav>
     </header>
+
+    <div id="overLay"></div>
+
+
 
     <section class="carousal">
         <div class="carousal-img fade">

@@ -1,18 +1,70 @@
 * {
-    margin: 1;
-    padding: 1;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-
-
-.textS {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+nav {
+    background-color: rgba(5, 121, 111, 0.938);
+    border-radius: 14px;
+    margin: 10px 5px 10px 5px;
+}
+.container-DN {
+    list-style: none;
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.container {
+.listItem-DN {
+    height: 50px;
+    /* text-decoration: none; */
+}
+.listItem-DN a{
     display: flex;
-    gap: 10px;
-    flex: 10;
-    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    padding: 15px 15px 0px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.listItem-DN:first-child {
+    padding-right: 0px;
+    margin-right: auto;
+}
+
+
+.container-MN {
+    position: fixed;
+    top: 0;
+    right: 0;
+    list-style: none;
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.listItem-MN {
+    height: 50px;
+    /* text-decoration: none; */
+}
+.listItem-MN a{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding: 15px 15px 0px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.listItem-MN:first-child {
+    padding-right: 0px;
+    margin-right: auto;
 }
